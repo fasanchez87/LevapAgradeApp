@@ -1,0 +1,161 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.ingeniapps.agradeser.fragment.Nominar"
+    android:background="@drawable/fondo">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="7dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.4">
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="130dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_logo_general" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/et1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Seleccionar Colaborador"
+                android:textColor="@color/colorLetraFondoEstrellado"
+                android:textSize="17sp"/>
+
+            <EditText
+                android:id="@+id/editTextCompañeroNominar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/style_editext_cuadrangular_fondo_estrellado"
+                android:gravity="center"
+                android:focusable="false"
+                android:inputType="none"
+                android:hint="Buscar Compañero"
+                android:layout_marginTop="9dp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/colorLetraFondoEstrellado"
+                android:textColorHint="@color/colorLetraFondoEstrellado"
+                android:theme="@style/EditTextFondoBlanco"/>
+
+            <TextView
+                android:id="@+id/et2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="Jefe Inmediato"
+                android:textColor="@color/colorLetraFondoEstrellado"
+                android:textSize="17sp"/>
+
+            <EditText
+                android:id="@+id/editTextJefeNominado"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/style_editext_cuadrangular_fondo_estrellado"
+                android:gravity="center"
+                android:hint="Nombre del Jefe"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                android:textColor="@color/colorLetraFondoEstrellado"
+                android:textColorHint="@color/colorLetraFondoEstrellado"
+                android:theme="@style/EditTextFondoBlanco"
+                />
+
+            <TextView
+                android:id="@+id/et3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="Gracias por"
+                android:textColor="@color/colorLetraFondoEstrellado"
+                android:textSize="17sp"/>
+
+
+            <EditText
+                android:id="@+id/editTextMotivoNominacion"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="9dp"
+                android:layout_weight="0.56"
+                android:background="@drawable/style_editext_cuadrangular_fondo_estrellado"
+                android:gravity="top|center"
+                android:hint="Motivo de Nominación"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp"
+                android:ems="10"
+                android:paddingTop="10dp"
+                android:textColor="@color/colorLetraFondoEstrellado"
+                android:textColorHint="@color/colorLetraFondoEstrellado"
+                android:theme="@style/EditTextFondoBlanco"/>
+
+            </LinearLayout>
+
+         <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/buttonNominarCompañeroDisable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_disable"
+                    android:text="Nominar Colaborador"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorBlanco"
+                    android:visibility="visible"/>
+
+                   <Button
+                    android:id="@+id/buttonNominarCompañeroEnable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button"
+                    android:text="Nominar Colaborador"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorBlanco"
+                    android:visibility="gone"   />
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

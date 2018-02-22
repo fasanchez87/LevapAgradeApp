@@ -1,0 +1,157 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorBlanco"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ingeniapps.agradeser.activity.Buscar"
+    android:focusableInTouchMode="true" >
+
+
+    <android.support.design.widget.AppBarLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:id="@android:id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:focusable="false"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_logo_bar" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/layoutMacroEsperaEmpleados">
+
+        <ImageView
+            android:id="@+id/not_found_empleados"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:src="@drawable/sin_resu_empleados" />
+
+        <RelativeLayout
+            android:id="@+id/layoutEsperaEmpleados"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:indeterminateTint="@color/colorPrimary"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/progressBar"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="4dp"
+                android:text="Cargando empleados, un momento..."
+                android:textSize="18sp"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/linearHabilitarEmpleados"
+        android:background="@drawable/fondo"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:background="@color/colorAmarilloLevapan">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:hint="Nombre Compañero"
+                android:paddingLeft="10dp"
+                android:background="@drawable/style_editext_cuadrangular"
+                android:theme="@style/EditTextFondoBlanco"
+                android:textColor="@color/colorEditTextGris"
+                android:textColorHint="@color/colorEditTextGris"
+                android:layout_weight="2"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:id="@+id/editTextBusquedaCompañero"
+                />
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:padding="4dp"
+                app:srcCompat="@drawable/ic_search"
+                tools:ignore="contentDescription" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/editTextNumEmpleados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBar"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:textSize="15sp"
+            android:textColor="@color/colorBlanco"
+            android:background="@color/colorPrimary"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_empleados"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:layout_weight="1"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

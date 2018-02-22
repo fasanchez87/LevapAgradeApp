@@ -1,0 +1,92 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.ingeniapps.agradeser.fragment.HistorialNominaciones">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:id="@+id/layoutMacroEsperaVotos">
+
+            <ImageView
+                android:id="@+id/not_found_votos_mis_nominados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:srcCompat="@drawable/sin_nomina" />
+
+            <RelativeLayout
+                android:id="@+id/layoutEsperaVotosMisNominados"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <ProgressBar
+                    android:id="@+id/progressBarNotificacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:indeterminateTint="@color/colorPrimary"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/progressBarNotificacion"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="4dp"
+                    android:text="Cargando, espera un momento..."
+                    android:textSize="18sp"
+                    android:textColor="@color/colorBlanco"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/linearHabilitarNominaciones"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/editTextNumMisNominados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/progressBar"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlanco"
+                android:background="@color/colorAmarilloLevapan"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_votos_mis_nominados"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:layout_weight="1"
+                android:visibility="visible"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

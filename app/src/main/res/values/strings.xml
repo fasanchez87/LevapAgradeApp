@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AgradeSER</string>
+    <string name="item_1">Nominar</string>
+    <string name="item_2">Historial</string>
+    <string name="item_3">Cuenta</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

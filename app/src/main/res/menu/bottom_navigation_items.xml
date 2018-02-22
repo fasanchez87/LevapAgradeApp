@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_nominar"
+        android:icon="@drawable/ic_votacion"
+        android:title="@string/item_1"/>
+    <item
+        android:id="@+id/action_historial"
+        android:icon="@drawable/ic_historial"
+        android:title="@string/item_2"/>
+    <item
+        android:id="@+id/action_cuenta"
+        android:icon="@drawable/ic_cuenta"
+        android:title="@string/item_3"/>
+
+</menu>

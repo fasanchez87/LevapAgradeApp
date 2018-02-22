@@ -1,0 +1,93 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorBlanco"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ingeniapps.agradeser.activity.Buscar"
+    android:focusableInTouchMode="true" >
+
+    <android.support.design.widget.AppBarLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:id="@android:id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:focusable="false"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_logo_bar" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/linearHabilitarEmpleados"
+        android:background="@drawable/fondo"
+        android:visibility="visible"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp">
+
+        <EditText
+            android:id="@+id/clave"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/style_editext_cuadrangular_fondo_estrellado"
+            android:hint="Contraseña"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorLetraFondoEstrellado"
+            android:textColorHint="@color/colorLetraFondoEstrellado"
+            android:theme="@style/EditTextFondoBlanco" />
+
+
+        <EditText
+            android:id="@+id/confirmarClave"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/style_editext_cuadrangular_fondo_estrellado"
+            android:hint="Confirmar Contraseña"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorLetraFondoEstrellado"
+            android:textColorHint="@color/colorLetraFondoEstrellado"
+            android:theme="@style/EditTextFondoBlanco" />
+
+        <Button
+            android:id="@+id/buttonGuardarClave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:text="Cambiar Contraseña"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlanco"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

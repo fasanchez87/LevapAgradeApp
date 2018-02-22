@@ -1,0 +1,98 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ingeniapps.agradeser.fragment.Cuenta">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fondo"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp">
+
+
+        <EditText
+            android:id="@+id/nombreCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/style_editext_cuadrangular_fondo_estrellado"
+            android:hint="Nombre"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorLetraFondoEstrellado"
+            android:textColorHint="@color/colorLetraFondoEstrellado"
+            android:theme="@style/EditTextFondoBlanco" />
+
+
+        <EditText
+            android:id="@+id/emailCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/style_editext_cuadrangular_fondo_estrellado"
+            android:hint="Correo"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorLetraFondoEstrellado"
+            android:textColorHint="@color/colorLetraFondoEstrellado"
+            android:theme="@style/EditTextFondoBlanco" />
+
+
+        <Button
+            android:id="@+id/buttonGuardarDisable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_disable"
+            android:text="Guardar"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlanco"
+            android:visibility="gone" />
+
+
+        <Button
+            android:id="@+id/buttonGuardarCambios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:text="Guardar"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlanco"
+            android:visibility="visible" />
+
+
+    <LinearLayout
+        android:id="@+id/sdasd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fondo"
+        android:orientation="vertical"
+        android:gravity="bottom|right"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_gravity="bottom"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/textViewCambioClave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|right"
+            android:layout_gravity="bottom"
+            android:paddingBottom="20dp"
+            android:text="Cambiar Contraseña"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorAmarilloLevapan"
+            android:textSize="17dip" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
